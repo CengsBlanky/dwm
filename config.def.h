@@ -87,6 +87,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+    { MODKEY,                       XK_F5,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-") },
+    { MODKEY,                       XK_F6,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+") },
+    { MODKEY,                       XK_F1,     spawn,          SHCMD("brightnessctl set 20%-") },
+    { MODKEY,                       XK_F2,     spawn,          SHCMD("brightnessctl set 20%+") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
