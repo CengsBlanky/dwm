@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 0;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "SourceHanSans:size=14", "OpenSans:size=14", "monospace:size=12" };
+static const char *fonts[]          = { "SourceHanSans:size=14", "OpenSans:size=14", "IosevkaZeng Nerd Font:size=14", "monospace:size=12" };
 static const char dmenufont[]       = "CourierPrime:size=16";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -36,7 +36,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "clash-verge",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -48,9 +47,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ " ",      tile },    /* first entry is default */
+	{ "󰈺 ",      NULL },    /* no layout function means floating behavior */
+	{ "󰰏 ",      monocle },
 };
 
 /* key definitions */
@@ -66,7 +65,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, "-l", "6", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browser[]  = { "firefox-esr", NULL };
 
