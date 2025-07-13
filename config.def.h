@@ -9,8 +9,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {"Source Han Sans VF:size=14", "IosevkaZeng Nerd Font:size=14", "Noto Color Emoji:size=14", "monospace:size=14"};
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#cbc093";
-static const char col_gray4[]       = "#dcd7ba";
+static const char col_gray3[]       = "#dcd7ba";
+static const char col_gray4[]       = "#efe0af";
 static const char col_cyan[]        = "#2a303d";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
@@ -44,7 +44,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "clash-verge",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "unknown",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -103,10 +103,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_F3,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-") },
-    { MODKEY,                       XK_F4,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+") },
     { MODKEY,                       XK_F1,     spawn,          SHCMD("brightnessctl set 20%-") },
     { MODKEY,                       XK_F2,     spawn,          SHCMD("brightnessctl set 20%+") },
+    { MODKEY,                       XK_F3,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-") },
+    { MODKEY,                       XK_F4,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+") },
+    { MODKEY,                       XK_F9,     spawn,          SHCMD("notify-sysinfo.sh") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
