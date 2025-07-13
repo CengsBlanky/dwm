@@ -10,7 +10,7 @@ static const char *fonts[]          = {"Source Han Sans VF:size=11", "IosevkaZen
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#dcd7ba";
-static const char col_gray4[]       = "#efe0af";
+static const char col_gray4[]       = "#e5e9f0";
 static const char col_cyan[]        = "#2a303d";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
