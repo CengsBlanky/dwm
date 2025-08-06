@@ -110,7 +110,8 @@ static const Key keys[] = {
     { MODKEY,                       XK_F4,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+") },
     { MODKEY,                       XK_F9,     spawn,          SHCMD("notify-sysinfo.sh") },
     { MODKEY,                       XK_a,      spawn,          SHCMD("focustag.sh") },
-    { MODKEY,                       XK_p,      spawn,          SHCMD("flameshot gui") },
+    { MODKEY,                       XK_e,      spawn,          SHCMD("thunar") },
+    { MODKEY,                       XK_c,      spawn,          SHCMD("flameshot gui") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
