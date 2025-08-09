@@ -25,6 +25,7 @@ dwm-msg: dwm-msg.o
 clean:
 	rm -f config.h
 	rm -f dwm dwm-msg ${OBJ} dwm-${VERSION}.tar.gz
+	rm -f *.o *.orig *.rej
 
 dist: clean
 	mkdir -p dwm-${VERSION}
