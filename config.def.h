@@ -73,7 +73,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browser[]  = { "firefox-esr", NULL };
 
@@ -104,12 +104,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_F1,     spawn,          SHCMD("brightnessctl set 20%-") },
-    { MODKEY,                       XK_F2,     spawn,          SHCMD("brightnessctl set 20%+") },
+    { MODKEY,                       XK_F1,     spawn,          SHCMD("brightnessctl set 10%-") },
+    { MODKEY,                       XK_F2,     spawn,          SHCMD("brightnessctl set 10%+") },
     { MODKEY,                       XK_F3,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-") },
     { MODKEY,                       XK_F4,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+") },
     { MODKEY,                       XK_F9,     spawn,          SHCMD("notify-sysinfo.sh") },
-    { MODKEY,                       XK_a,      spawn,          SHCMD("focustag.sh") },
+    { MODKEY,                       XK_a,      spawn,          SHCMD("switchtag.sh") },
     { MODKEY,                       XK_e,      spawn,          SHCMD("thunar") },
     { MODKEY,                       XK_c,      spawn,          SHCMD("flameshot gui") },
 	TAGKEYS(                        XK_1,                      0)
