@@ -9,8 +9,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {"Noto Sans:size=11", "Noto Color Emoji:size=11", "Maple Mono Normal NL NF CN:size=11", "monospace:size=11"};
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bebebf";
-static const char col_gray4[]       = "#e5e9f0";
+static const char col_gray3[]       = "#868e96";
+static const char col_gray4[]       = "#adb5bd";
 static const char col_cyan[]        = "#1e202a";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
