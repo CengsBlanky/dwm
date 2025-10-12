@@ -1,5 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
+// enable multi media key
+#include <X11/XF86keysym.h>
+static const char *upvol[]      = { "wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "10%+",      NULL };
+static const char *downvol[]    = { "wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "10%-",      NULL };
+static const char *mutevol[]    = { "wpctl",   "set-mute",   "@DEFAULT_AUDIO_SINK@",      "toggle",   NULL };
+static const char *light_up[]   = { "brightnessctl", "set", "10%+", NULL };
+static const char *light_down[] = { "brightnessctl", "set", "10%-", NULL };
+
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 0;        /* snap pixel */
@@ -75,7 +83,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *browser[]  = { "firefox-esr", NULL };
+static const char *browser[]  = { "firefox", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -104,15 +112,20 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_F1,     spawn,          SHCMD("brightnessctl set 10%-") },
-    { MODKEY,                       XK_F2,     spawn,          SHCMD("brightnessctl set 10%+") },
-    { MODKEY,                       XK_F3,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-") },
-    { MODKEY,                       XK_F4,     spawn,          SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+") },
-    { MODKEY,                       XK_F9,     spawn,          SHCMD("notify-sysinfo.sh") },
-    { MODKEY,                       XK_F12,    spawn,          SHCMD("sysops.sh") },
-    { MODKEY,                       XK_a,      spawn,          SHCMD("switchtag.sh") },
-    { MODKEY,                       XK_e,      spawn,          SHCMD("thunar") },
-    { MODKEY,                       XK_c,      spawn,          SHCMD("flameshot gui") },
+	{ 0,                            XF86XK_AudioLowerVolume,   spawn, {.v = downvol } },
+	{ MODKEY,                       XK_F1,                     spawn, {.v = downvol } },
+	{ 0,                            XF86XK_AudioRaiseVolume,   spawn, {.v = upvol   } },
+	{ MODKEY,                       XK_F2,                     spawn, {.v = upvol   } },
+	{ 0,                            XF86XK_AudioMute,          spawn, {.v = mutevol } },
+	{ 0,				            XF86XK_MonBrightnessDown,  spawn, {.v = light_down} },
+	{ MODKEY,						XK_F3,                     spawn, {.v = light_down} },
+	{ 0,				            XF86XK_MonBrightnessUp,	   spawn, {.v = light_up} },
+	{ MODKEY,				        XK_F4,	                   spawn, {.v = light_up} },
+    { MODKEY,                       XK_F9,                     spawn, SHCMD("notify-sysinfo.sh") },
+    { MODKEY,                       XK_F12,                    spawn, SHCMD("sysops.sh") },
+    { MODKEY,                       XK_a,	                   spawn, SHCMD("switchtag.sh") },
+    { MODKEY,                       XK_e,                      spawn, SHCMD("thunar") },
+    { MODKEY,                       XK_c,                      spawn, SHCMD("flameshot gui") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
