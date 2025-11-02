@@ -48,21 +48,23 @@ static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the b
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Alacritty",          NULL,  NULL,  1 << 0,  0,  -1 },
-	{ "firefox",            NULL,  NULL,  1 << 1,  0,  -1 },
-	{ "eudic",              NULL,  NULL,  1 << 2,  0,  -1 },
-	{ "Zathura",            NULL,  NULL,  1 << 3,  0,  -1 },
-	{ "Foliate",            NULL,  NULL,  1 << 3,  0,  -1 },
-	{ "Localsend",          NULL,  NULL,  1 << 4,  0,  -1 },
-	{ "wechat",             NULL,  NULL,  1 << 4,  0,  -1 },
-	{ "JetBrains Toolbox",  NULL,  NULL,  1 << 5,  0,  -1 },
-	{ "Virt-manager",       NULL,  NULL,  1 << 6,  0,  -1 },
-	{ "KeePassXC",          NULL,  NULL,  1 << 7,  0,  -1 },
+    /* xprop(1):
+     *	WM_CLASS(STRING) = instance, class
+     *	WM_NAME(STRING) = title
+	 *	get WM info: xprop | grep -E "(WM_CLASS|WM_NAME)"
+	 *	  click app to finish
+     */
+    /* class      instance    title       tags mask     isfloating   monitor */
+    {"Alacritty",         NULL, NULL, 1 << 0, 0, -1},
+    {"firefox",           NULL, NULL, 1 << 1, 0, -1},
+    {"eudic",             NULL, NULL, 1 << 2, 0, -1},
+    {"Zathura",           NULL, NULL, 1 << 3, 0, -1},
+    {"Foliate",           NULL, NULL, 1 << 3, 0, -1},
+    {"Localsend",         NULL, NULL, 1 << 4, 0, -1},
+    {"wechat",            NULL, NULL, 1 << 4, 0, -1},
+    {"JetBrains Toolbox", NULL, NULL, 1 << 5, 0, -1},
+    {"Virt-manager",      NULL, NULL, 1 << 6, 0, -1},
+    {"KeePassXC",         NULL, NULL, 1 << 7, 0, -1},
 };
 
 /* layout(s) */
