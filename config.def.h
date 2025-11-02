@@ -2,11 +2,11 @@
 
 // enable multi media key
 #include <X11/XF86keysym.h>
-static const char *upvol[]      = { "wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "10%+",      NULL };
-static const char *downvol[]    = { "wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "10%-",      NULL };
+static const char *upvol[]      = { "wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%+",      NULL };
+static const char *downvol[]    = { "wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%-",      NULL };
 static const char *mutevol[]    = { "wpctl",   "set-mute",   "@DEFAULT_AUDIO_SINK@",      "toggle",   NULL };
-static const char *light_up[]   = { "brightnessctl", "set", "10%+", NULL };
-static const char *light_down[] = { "brightnessctl", "set", "10%-", NULL };
+static const char *light_up[]   = { "brightnessctl", "set", "5%+", NULL };
+static const char *light_down[] = { "brightnessctl", "set", "5%-", NULL };
 
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
@@ -53,7 +53,16 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "unknown",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Alacritty",          NULL,  NULL,  1 << 0,  0,  -1 },
+	{ "firefox",            NULL,  NULL,  1 << 1,  0,  -1 },
+	{ "eudic",              NULL,  NULL,  1 << 2,  0,  -1 },
+	{ "Zathura",            NULL,  NULL,  1 << 3,  0,  -1 },
+	{ "Foliate",            NULL,  NULL,  1 << 3,  0,  -1 },
+	{ "Localsend",          NULL,  NULL,  1 << 4,  0,  -1 },
+	{ "wechat",             NULL,  NULL,  1 << 4,  0,  -1 },
+	{ "JetBrains Toolbox",  NULL,  NULL,  1 << 5,  0,  -1 },
+	{ "Virt-manager",       NULL,  NULL,  1 << 6,  0,  -1 },
+	{ "KeePassXC",          NULL,  NULL,  1 << 7,  0,  -1 },
 };
 
 /* layout(s) */
