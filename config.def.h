@@ -2,11 +2,6 @@
 
 // enable multi media key
 #include <X11/XF86keysym.h>
-static const char *upvol[]      = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL};
-static const char *downvol[]    = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL};
-static const char *mutevol[]    = {"wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", NULL};
-static const char *light_up[]   = {"brightnessctl", "set", "5%+", NULL};
-static const char *light_down[] = {"brightnessctl", "set", "5%-", NULL};
 
 /* appearance */
 static const unsigned int borderpx = 0; /* border pixel of windows */
@@ -133,15 +128,15 @@ static const Key keys[] = {
     {MODKEY,             XK_period,                focusmon,       {.i = +1}                 },
     {MODKEY | ShiftMask, XK_comma,                 tagmon,         {.i = -1}                 },
     {MODKEY | ShiftMask, XK_period,                tagmon,         {.i = +1}                 },
-    {0,                  XF86XK_MonBrightnessDown, spawn,          {.v = light_down}         },
-    {MODKEY,             XK_F1,                    spawn,          {.v = light_down}         },
-    {0,                  XF86XK_MonBrightnessUp,   spawn,          {.v = light_up}           },
-    {MODKEY,             XK_F2,                    spawn,          {.v = light_up}           },
-    {0,                  XF86XK_AudioLowerVolume,  spawn,          {.v = downvol}            },
-    {MODKEY,             XK_F3,                    spawn,          {.v = downvol}            },
-    {0,                  XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol}              },
-    {MODKEY,             XK_F4,                    spawn,          {.v = upvol}              },
-    {0,                  XF86XK_AudioMute,         spawn,          {.v = mutevol}            },
+    {0,                  XF86XK_MonBrightnessDown, spawn,          SHCMD("bright_down.sh")   },
+    {MODKEY,             XK_F1,                    spawn,          SHCMD("bright_down.sh")   },
+    {0,                  XF86XK_MonBrightnessUp,   spawn,          SHCMD("bright_up.sh")     },
+    {MODKEY,             XK_F2,                    spawn,          SHCMD("bright_up.sh")     },
+    {0,                  XF86XK_AudioLowerVolume,  spawn,          SHCMD("volume_down.sh")   },
+    {MODKEY,             XK_F3,                    spawn,          SHCMD("volume_down.sh")   },
+    {0,                  XF86XK_AudioRaiseVolume,  spawn,          SHCMD("volume_up.sh")     },
+    {MODKEY,             XK_F4,                    spawn,          SHCMD("volume_up.sh")     },
+    {0,                  XF86XK_AudioMute,         spawn,          SHCMD("toggle_mute.sh")   },
     {MODKEY,             XK_F9,                    spawn,          SHCMD("notify-sysinfo.sh")},
     {MODKEY,             XK_F12,                   spawn,          SHCMD("sysops.sh")        },
     {MODKEY,             XK_a,                     spawn,          SHCMD("switchtag.sh")     },
