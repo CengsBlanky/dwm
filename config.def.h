@@ -62,7 +62,7 @@ static const Rule rules[] = {
     {"Zathura",           NULL, NULL, 1 << 3, 0, -1},
     {"Foliate",           NULL, NULL, 1 << 3, 0, -1},
     {"wechat",            NULL, NULL, 1 << 4, 0, -1},
-    {"jetbrains-toolbox", NULL, NULL, 1 << 5, 0, -1},
+    {"jetbrains-toolbox", NULL, NULL, 1 << 5, 1, -1},
     {"jetbrains-studio",  NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-idea",    NULL, NULL, 1 << 5, 0, -1},
     {"Code",              NULL, NULL, 1 << 5, 0, -1},
