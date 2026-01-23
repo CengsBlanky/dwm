@@ -66,6 +66,7 @@ static const Rule rules[] = {
     {"jetbrains-studio",  NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-idea",    NULL, NULL, 1 << 5, 0, -1},
     {"Code",              NULL, NULL, 1 << 5, 0, -1},
+    {"wemeetapp",         NULL, NULL, 1 << 6, 0, -1},
     {"Virt-manager",      NULL, NULL, 1 << 6, 0, -1},
     {"KeePassXC",         NULL, NULL, 1 << 7, 0, -1},
     {"Clash-verge",       NULL, NULL, 1 << 8, 0, -1},
