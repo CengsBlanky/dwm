@@ -71,6 +71,7 @@ static const Rule rules[] = {
     {"wemeetapp",               NULL, NULL, 1 << 6, 0, -1},
     {"Virt-manager",            NULL, NULL, 1 << 6, 0, -1},
     {"KeePassXC",               NULL, NULL, 1 << 7, 0, -1},
+    {"KeeWeb",                  NULL, NULL, 1 << 7, 0, -1},
     {"Clash-verge",             NULL, NULL, 1 << 8, 0, -1},
 };
 
