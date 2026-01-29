@@ -55,21 +55,23 @@ static const Rule rules[] = {
      *	  click app to finish
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    {"Alacritty",         NULL, NULL, 1 << 0, 0, -1},
-    {"firefox",           NULL, NULL, 1 << 1, 0, -1},
-    {"eudic",             NULL, NULL, 1 << 2, 0, -1},
-    {"Localsend",         NULL, NULL, 1 << 2, 0, -1},
-    {"Zathura",           NULL, NULL, 1 << 3, 0, -1},
-    {"Foliate",           NULL, NULL, 1 << 3, 0, -1},
-    {"wechat",            NULL, NULL, 1 << 4, 0, -1},
-    {"jetbrains-toolbox", NULL, NULL, 1 << 5, 1, -1},
-    {"jetbrains-studio",  NULL, NULL, 1 << 5, 0, -1},
-    {"jetbrains-idea",    NULL, NULL, 1 << 5, 0, -1},
-    {"Code",              NULL, NULL, 1 << 5, 0, -1},
-    {"wemeetapp",         NULL, NULL, 1 << 6, 0, -1},
-    {"Virt-manager",      NULL, NULL, 1 << 6, 0, -1},
-    {"KeePassXC",         NULL, NULL, 1 << 7, 0, -1},
-    {"Clash-verge",       NULL, NULL, 1 << 8, 0, -1},
+    {"Alacritty",               NULL, NULL, 1 << 0, 0, -1},
+    {"firefox",                 NULL, NULL, 1 << 1, 0, -1},
+    {"eudic",                   NULL, NULL, 1 << 2, 0, -1},
+    {"Localsend",               NULL, NULL, 1 << 2, 0, -1},
+    {"Zathura",                 NULL, NULL, 1 << 3, 0, -1},
+    {"Foliate",                 NULL, NULL, 1 << 3, 0, -1},
+    {"wechat",                  NULL, NULL, 1 << 4, 0, -1},
+    {"org.mozilla.Thunderbird", NULL, NULL, 1 << 4, 0, -1},
+    {"Mail",                    NULL, NULL, 1 << 4, 0, -1},
+    {"jetbrains-toolbox",       NULL, NULL, 1 << 5, 1, -1},
+    {"jetbrains-studio",        NULL, NULL, 1 << 5, 0, -1},
+    {"jetbrains-idea",          NULL, NULL, 1 << 5, 0, -1},
+    {"Code",                    NULL, NULL, 1 << 5, 0, -1},
+    {"wemeetapp",               NULL, NULL, 1 << 6, 0, -1},
+    {"Virt-manager",            NULL, NULL, 1 << 6, 0, -1},
+    {"KeePassXC",               NULL, NULL, 1 << 7, 0, -1},
+    {"Clash-verge",             NULL, NULL, 1 << 8, 0, -1},
 };
 
 /* layout(s) */
