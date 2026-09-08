@@ -52,6 +52,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     {"Alacritty",               NULL, NULL, 1 << 0, 0, -1},
     {"firefox",                 NULL, NULL, 1 << 1, 0, -1},
+    {"wemeetapp",               NULL, NULL, 1 << 2, 0, -1},
     {"eudic",                   NULL, NULL, 1 << 2, 0, -1},
     {"Localsend",               NULL, NULL, 1 << 2, 0, -1},
     {"org.mozilla.Thunderbird", NULL, NULL, 1 << 3, 0, -1},
@@ -61,7 +62,6 @@ static const Rule rules[] = {
     {"Foliate",                 NULL, NULL, 1 << 3, 0, -1},
     {"wpsoffice",               NULL, NULL, 1 << 3, 0, -1},
     {"wechat",                  NULL, NULL, 1 << 4, 0, -1},
-    {"wemeetapp",               NULL, NULL, 1 << 4, 0, -1},
     {"jetbrains-toolbox",       NULL, NULL, 1 << 5, 1, -1},
     {"jetbrains-studio",        NULL, NULL, 1 << 5, 0, -1},
     {"jetbrains-idea",          NULL, NULL, 1 << 5, 0, -1},
